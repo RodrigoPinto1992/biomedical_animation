@@ -1,0 +1,57 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0px;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    flex-direction: column;
+}
+.animation{
+    /*El valor menor entre <width> y <max-width> prevalese*/
+    width: 50%; /*ancho respecto a la pantalla*/
+    max-width: 400px; /*ancho máximo*/
+    margin: auto; /*Espacio fuera de la caja*/   
+    display: flex; /*Permite aplicar propiedades para posicionamiento*/
+    justify-content: center; /*Requiere de <display: flex> para funcionar*/
+    position: relative; 
+}
+
+.boton{
+    margin: auto; 
+}
+#btnAnimar, #btnBorrar{
+    font-size: 16px;
+    cursor: pointer;
+}
+
+img {
+    position: absolute;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+}
+.luz{
+    left: 0px;
+    top: 39px; 
+    clip-path: inset(0 0 0 100%);
+}
+.animada{
+    left: 0px;
+    top: 39px;  
+    animation: wipeReveal 1s ease-in-out forwards 
+}
+.ojo{
+    left: 0px;   
+}
+
+@keyframes wipeReveal {
+  to{
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+
