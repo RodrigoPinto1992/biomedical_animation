@@ -1,57 +1,76 @@
+/*CONFIGURACIÓN GENERAL*/
 *{
     box-sizing: border-box;
 }
 body{
-    margin: 0px;
-    width: 100vw;
-    height: 100vh;
+    margin: 20px;
+    width: 90vw;
+    height: 90vh;
     display: flex;
     align-items: center;
     justify-content: center; 
     flex-direction: column;
 }
+.etiqueta{
+    margin: 20px 0 0 0;
+}
+#primera-etiqueta{
+    margin: 0;
+}
+
+/*ELEMENTOS ANIMADOS*/
 .animation{
+    width: 50%; /*ancho del elemento respecto a la pantalla*/
+    max-width: 400px; /*ancho máximo del elemento*/
     /*El valor menor entre <width> y <max-width> prevalese*/
-    width: 50%; /*ancho respecto a la pantalla*/
-    max-width: 400px; /*ancho máximo*/
-    margin: auto; /*Espacio fuera de la caja*/   
+    margin: 60px auto; /*Espacio fuera de la caja*/   
     display: flex; /*Permite aplicar propiedades para posicionamiento*/
+    flex-direction: column;
     justify-content: center; /*Requiere de <display: flex> para funcionar*/
     position: relative; 
 }
-
-.boton{
-    margin: auto; 
-}
-#btnAnimar, #btnBorrar{
-    font-size: 16px;
-    cursor: pointer;
-}
-
 img {
     position: absolute;
-    width: auto;
     height: auto;
+    width: auto;
     object-fit: contain;
 }
+.ojo{
+    height: 99px;
+    width: auto;
+}
 .luz{
+    height: 53.4px;
+    width: auto;
     left: 0px;
-    top: 39px; 
+    top: -25px; 
     clip-path: inset(0 0 0 100%);
 }
 .animada{
     left: 0px;
-    top: 39px;  
+    top: -25px;   
     animation: wipeReveal 1s ease-in-out forwards 
 }
 .ojo{
     left: 0px;   
 }
 
+/*ANIMACIONES CSS*/
 @keyframes wipeReveal {
   to{
     clip-path: inset(0 0 0 0);
   }
 }
 
-
+/*BOTONES DE CONTROL*/
+.boton{
+    margin: auto; /*Espacio fuera de la caja*/   
+    display: flex; /*Permite aplicar propiedades para posicionamiento*/
+    flex-direction: row;
+    position: relative;  
+}
+#btnAnimar, #btnBorrar{
+    font-size: 16px;
+    cursor: pointer;
+    margin: 10px;
+}
