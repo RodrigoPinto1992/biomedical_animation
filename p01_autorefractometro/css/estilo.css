@@ -3,6 +3,7 @@
     box-sizing: border-box;
 }
 body{
+    background-color: #F3F7EE;
     margin: 20px;
     width: 90vw;
     height: 90vh;
