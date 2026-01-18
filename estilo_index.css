@@ -26,7 +26,9 @@ h3{
 }
 .grid-item {
   background-color: #DEE8CF;
+  font-family: sans-serif;
   text-align: center;
+  padding: 5px;
 }
 .anima_btn{
     margin: 10px;
